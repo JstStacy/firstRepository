@@ -1,7 +1,9 @@
 import pytest
 from modules.api.clients.github import GitHub
+from modules.common.database import Database 
 
 
+# Create class User
 class User:
 
     def __init__(self) -> None:
@@ -16,7 +18,7 @@ class User:
         self.name = ''
         self.second_name = ''
 
-
+# Create fixture for User()
 @pytest.fixture
 def user():
     user = User()
@@ -26,12 +28,17 @@ def user():
 
     user.remove()
 
-
+# Create fixture for GitHub()
 @pytest.fixture
 def github_api():
     api = GitHub()
     yield api
     
+# Create fixture for Database()
+@pytest.fixture
+def database():
+    db = Database()
+    yield db
 
 
     

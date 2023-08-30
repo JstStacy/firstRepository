@@ -1,6 +1,7 @@
 import pytest
 import requests
 
+# Create a group of tests for http. The mark 'http' was used
 
 @pytest.mark.http
 def test_first_request():
@@ -16,7 +17,6 @@ def test_second_request():
     assert body['name'] == 'Chris Wanstrath'
     assert r.status_code == 200
     assert headers['Server'] =='GitHub.com'
-
 
 @pytest.mark.http
 def test_status_code_request():

@@ -1,6 +1,6 @@
 import requests
 
-
+# Create class GitHub
 class GitHub:
 
     def get_user(self, username):

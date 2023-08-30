@@ -2,7 +2,7 @@ import pytest
 import requests
 from modules.api.clients.github import GitHub
 
-
+# Create tests for GitHub API
 @pytest.mark.api
 def test_user_exists(github_api):
     user = github_api.get_user('defunkt')
@@ -29,6 +29,7 @@ def test_repo_with_single_char_be_found(github_api):
     r = github_api.search_repo('s')
     assert r['total_count'] != 0
 
+# Start of individual part
 @pytest.mark.api
 def test_combined_status_for_a_specific_reference(github_api):
     r = github_api.get_a_combined_status('JstStacy','firstRepository', 'c7cee272b4e5d938ca0d86210900aeb05e7853c5')

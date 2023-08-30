@@ -1,6 +1,6 @@
 import sqlite3
 
-
+# Create class Database 
 class Database():
 
     def __init__(self):
@@ -14,7 +14,7 @@ class Database():
         print(f"Connected successfully. SQLite Database Version is: {record}")
 
     def get_all_users(self):
-        query = "SELECT name, address, city FROM customers"
+        query = "SELECT name, address, city, postalCode FROM customers"
         self.cursor.execute(query)
         record = self.cursor.fetchall()
         return record
@@ -56,6 +56,24 @@ class Database():
         self.cursor.execute(query)
         record = self.cursor.fetchall()
         return record
+    
+    # Individual part
+    def insert_customer(self, id, name, address, city, postalCode, country):
+        query = f"INSERT OR REPLACE INTO customers (id, name, address, city, postalCode, country) \
+            VALUES ({id}, '{name}', '{address}', '{city}', '{postalCode}', '{country}')"
+        self.cursor.execute(query)
+        self.connection.commit()
+
+    def get_customer_postalCode(self, name):
+        query = f"SELECT postalCode FROM customers WHERE name = '{name}'"
+        self.cursor.execute(query)
+        record = self.cursor.fetchall()
+        return record
+    
+    
+
+
+
     
 
         
