@@ -2,6 +2,7 @@
 Hi there! This is my first project with Python and Pytest.
 # General Information
 This project consist of API, Database, and UI tests that were a practical part of Automation Testing study.
+It is still in progres and will be supplemented with new tests.
 # Folder structure from the root directory of the project
 ```
 /chromedriver-mac-arm-64
