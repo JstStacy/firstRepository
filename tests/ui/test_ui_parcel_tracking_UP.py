@@ -1,4 +1,4 @@
-from modules.ui.page_objects.parcel_tracking_NP import ParcelTracking
+from modules.ui.page_objects.parcel_tracking_UP import ParcelTracking
 import pytest
 import random
 import string
@@ -8,7 +8,7 @@ def random_string(length):
     return ''.join(random.choice(letters) for _ in range(length))
 
 
-@pytest.mark.ui_NP
+@pytest.mark.ui_UP
 def test_check_incorrect_tth():
     # Create page object
     find_parcel = ParcelTracking()
