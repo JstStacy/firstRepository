@@ -68,6 +68,9 @@ To run UI tests use next command in terminal
 ```
 pytest -m ui
 ```
-
+To run Individual UI tests that check parcel tracking on UkrPoshta web site use next command in terminal
+```
+pytest -m ui_UP
+```
 
 
