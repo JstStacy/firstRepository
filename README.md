@@ -25,6 +25,7 @@ It is still in progres and will be supplemented with new tests.
     /modules/ui/page_objects/__init__.py
     /modules/ui/page_objects/base_page.py
     /modules/ui/page_objects/sign_in_page.py
+    /modules/ui/page_objects/parcel_tracking_UP.py
 
 /tests
   /tests/api
@@ -38,6 +39,7 @@ It is still in progres and will be supplemented with new tests.
   /tests/ui
     /tests/ui/test_ui_page_object.py
     /tests/ui/test_ui.py
+    /tests/ui/test_ui_parcel_tracking_UP.py
 
   /tests/test_http.py
     
