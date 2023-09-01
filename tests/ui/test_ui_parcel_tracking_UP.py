@@ -7,7 +7,6 @@ def random_string(length):
     letters = string.ascii_letters
     return ''.join(random.choice(letters) for _ in range(length))
 
-
 @pytest.mark.ui_UP
 def test_check_incorrect_tth():
     # Create page object
